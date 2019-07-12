@@ -13,7 +13,8 @@ const forecast = (latitude, longitude, callback) => {
             const temp = body.currently.temperature
             const prob = (body.currently.precipProbability)*100
             const summary = body.daily.data[0].summary
-            callback(undefined, summary + ' It is currently ' + temp + ' degrees out. There is a ' + prob + '% chance of rain.')
+            const windSpeed = body.currently.windSpeed
+            callback(undefined, summary + ' It is currently ' + temp + ' degrees out. There is a ' + prob + '% chance of rain. Winds are blowing at about ' + windSpeed + 'MPH')
         }
     })
 }
