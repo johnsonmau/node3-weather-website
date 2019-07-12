@@ -10,30 +10,32 @@ const port = process.env.PORT || 3000
 const publicDirectoryPath = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname,'../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
+const bootstrapPath = path.join(__dirname, '/../node_modules/bootstrap/dist')
 
 app.set('view engine', 'hbs')
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
 app.use(express.static(publicDirectoryPath))
+app.use(express.static(bootstrapPath))
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'Weather',
+        title: 'weather.',
         name: 'Maurice Johnson'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'About',
+        title: 'about.',
         name: 'Maurice Johnson'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'Help',
+        title: 'help.',
         name: 'Maurice Johnson'
     })
 })
