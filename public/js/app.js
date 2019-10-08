@@ -3,15 +3,16 @@ const search = document.querySelector('input')
 const messageOne = document.querySelector('#message-1')
 const messageTwo = document.querySelector('#message-2')
 
-document.getElementById('spinner').style.display='none'; 
+document.getElementById('loader').style.display='none'; 
 
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
 
-    document.getElementById('spinner').style.display='block'; 
+    document.getElementById('loader').style.display='block'; 
 
     const location = search.value
 
+    messageOne.textContent = ''
     messageTwo.textContent = ''
     
 fetch('/weather?address='+location).then((response) => { 
@@ -24,7 +25,7 @@ fetch('/weather?address='+location).then((response) => {
         } else {
             messageOne.textContent = 'Please enter a location'
         }
-        document.getElementById('spinner').style.display='none'; 
+        document.getElementById('loader').style.display='none'; 
     })
 })
 })

@@ -21,21 +21,21 @@ app.use(express.static(bootstrapPath))
 
 app.get('/', (req, res) => {
     res.render('index', {
-        title: 'weather.',
+        title: 'weather',
         name: 'Maurice Johnson'
     })
 })
 
 app.get('/about', (req, res) => {
     res.render('about', {
-        title: 'about.',
+        title: 'about',
         name: 'Maurice Johnson'
     })
 })
 
 app.get('/help', (req, res) => {
     res.render('help', {
-        title: 'help.',
+        title: 'help',
         name: 'Maurice Johnson'
     })
 })

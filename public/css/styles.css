@@ -1,7 +1,7 @@
 body {
     color: #333333;
-    font-family: "Avenir Next";
-    max-width: 650px;
+    font-family: "Open Sans Semibold";
+    max-width: 950px;
     margin: 0 auto;
     padding: 0 16px;
 
@@ -56,16 +56,13 @@ button {
 }
 
 #cloud {
-    color: forestgreen;
+    color:  rgb(48, 114, 139);
 }
 
 #pageTitle {
-    font-family: "Avenir Next";
-    color: forestgreen;
+    font-family: "Cooper Black";
+    color: rgb(48, 114, 139);
 }
 #pageFooter {
     font-family: "Palatino";
-}
-.modal-title {
-    color: forestgreen;
 }
