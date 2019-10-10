@@ -10,11 +10,7 @@ const forecast = (latitude, longitude, callback) => {
         } else if (body.error){
             callback('Unable to get weather', undefined)
         } else {
-            const temp = body.currently.temperature
-            //const prob = (body.currently.precipProbability)*100
-            const summary = body.daily.data[0].summary
-            const windSpeed = body.currently.windSpeed
-            callback(undefined, summary + ' It is currently ' + Math.round(temp) + ' degrees out.  Winds are blowing at about ' + Math.round(windSpeed) + 'MPH')
+            callback(undefined, body)
         }
     })
 }

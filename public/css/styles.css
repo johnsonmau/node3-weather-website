@@ -1,6 +1,6 @@
 body {
     color: #333333;
-    font-family: "Open Sans Semibold";
+    font-family: "Gill Sans";
     max-width: 950px;
     margin: 0 auto;
     padding: 0 16px;
@@ -55,6 +55,22 @@ button {
     padding: 8px
 }
 
+#today {
+    padding: 30px;
+}
+#today1 {
+    padding: 30px;
+}
+#today2 {
+    padding: 30px;
+}
+#today3 {
+    padding: 30px;
+}
+#today4 {
+    padding: 30px;
+}
+
 #cloud {
     color:  rgb(48, 114, 139);
 }
@@ -64,5 +80,5 @@ button {
     color: rgb(48, 114, 139);
 }
 #pageFooter {
-    font-family: "Palatino";
+    font-family: "Gill Sans";
 }

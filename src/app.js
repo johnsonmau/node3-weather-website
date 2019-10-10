@@ -55,9 +55,11 @@ app.get('/weather', (req, res) => {
             if (error) return res.send({ error })
     
             res.send({
-                forecast: forecastData,
+                forecast: forecastData.currently.summary + '. It is currently ' + Math.round(forecastData.currently.temperature)
+                + ' degrees out.  Winds are blowing at about ' + Math.round(forecastData.currently.windSpeed) + 'MPH.',
                 location: placeName,
-                address: req.query.address
+                address: req.query.address,
+                fiveday: forecastData.daily.data
             })
           })
     })
